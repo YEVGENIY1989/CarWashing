@@ -1,6 +1,7 @@
 package chalykh.carWash.controllers;
 
 
+import chalykh.carWash.dao.AdminDao;
 import chalykh.carWash.domain.Admin;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,9 +16,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/")
 public class Authorization {
 
-    @Autowired
-    public Authorization(){
+    private AdminDao adminDao;
 
+    @Autowired
+    public Authorization(AdminDao adminDao){
+        this.adminDao = adminDao;
     }
 
    @GetMapping
@@ -29,7 +32,10 @@ public class Authorization {
     @PostMapping()
     public String goToEditOrClient(@ModelAttribute("admin")Admin admin ){
 
-        System.out.println("In POST");
+        for(Admin ad : adminDao.getAll()){
+            if (ad.getLogin().equals(admin.getLogin()) && ad.getPassword().equals(admin.getPassword()))
+                return ""
+        }
 
         return "redirect:/edit";
     }
