@@ -1,7 +1,4 @@
 package chalykh.carWash.dao;
 
-public interface AdminDao {
-
-
-
+public class AdminDaoImp {
 }
