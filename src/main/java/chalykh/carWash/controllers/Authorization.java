@@ -7,6 +7,7 @@ import chalykh.carWash.domain.Admin;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,6 +18,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class Authorization {
 
     private AdminDao adminDao;
+    private Model model;
+    private boolean isFailedAthor;
 
     @Autowired
     public Authorization(AdminDao adminDao){
@@ -24,8 +27,10 @@ public class Authorization {
     }
 
    @GetMapping
-    public String authorizationAdmin(@ModelAttribute("admin")Admin admin){
-       System.out.println("In GET");
+    public String authorizationAdmin(@ModelAttribute("admin")Admin admin, Model model){
+
+        if (isFailedAthor)
+            model.addAttribute("error", "Ошибка авторизации. Неправильный логин или пароль");
         return "authorization.html";
     }
 
@@ -34,10 +39,10 @@ public class Authorization {
 
         for(Admin ad : adminDao.getAll()){
             if (ad.getLogin().equals(admin.getLogin()) && ad.getPassword().equals(admin.getPassword()))
-                return ""
+                return "redirect:/edit";
         }
-
-        return "redirect:/edit";
+        isFailedAthor = true;
+        return "redirect:/";
     }
 
 }

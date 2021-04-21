@@ -16,16 +16,29 @@
 
     <div id = "root" align="center">
 
+
         <form th:method="POST" th:action="@{/}" th:object="${admin}">
 
             <label for="login">Enter login: </label>
             <input type="text" th:field="*{login}" id="login" value = "login"/>
             <br/>
+            <p>
+
+            </p>
             <label for="password">Enter password: </label>
             <input type="text" th:field="*{password}" id="password" value="password"/>
             <br/>
 
+            <p th:if="${error}">
+                <span class="type-red" th:text="${error}">Error</span>
+            </p>
             <input type="submit" value="Войти"/>
+
+        </form>
+
+        <form  >
+            <a th:href="@{carWash}"/>
+            <input type="submit" value="Посетитель" />
 
         </form>
 
