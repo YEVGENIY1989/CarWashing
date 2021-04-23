@@ -28,5 +28,80 @@
       <Comment>system catalog schema</Comment>
       <Substituted>1</Substituted>
     </schema>
+    <sequence id="9" parent="6" name="admins_id_seq"/>
+    <sequence id="10" parent="6" name="client_id_seq"/>
+    <sequence id="11" parent="6" name="service_list_id_seq"/>
+    <table id="12" parent="6" name="admins"/>
+    <table id="13" parent="6" name="client"/>
+    <table id="14" parent="6" name="service_list"/>
+    <column id="15" parent="12" name="id">
+      <Position>1</Position>
+      <DataType>int4|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="16" parent="12" name="login">
+      <Position>2</Position>
+      <DataType>varchar(255)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="17" parent="12" name="password">
+      <Position>3</Position>
+      <DataType>varchar(255)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="18" parent="12" name="admins_pkey">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="19" parent="12" name="admins_pkey">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="20" parent="13" name="id">
+      <Position>1</Position>
+      <DataType>int4|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="21" parent="13" name="timeofservice">
+      <Position>2</Position>
+      <DataType>varchar(255)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="22" parent="13" name="typeofservice">
+      <Position>3</Position>
+      <DataType>varchar(255)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="23" parent="13" name="dataofservice">
+      <Position>4</Position>
+      <DataType>varchar(255)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="24" parent="13" name="client_pkey">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="25" parent="13" name="client_pkey">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="26" parent="14" name="id">
+      <Position>1</Position>
+      <DataType>int4|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="27" parent="14" name="service">
+      <Position>2</Position>
+      <DataType>varchar(255)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="28" parent="14" name="service_list_pkey">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="29" parent="14" name="service_list_pkey">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
   </database-model>
 </dataSource>
