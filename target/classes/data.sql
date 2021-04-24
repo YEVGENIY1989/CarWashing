@@ -7,15 +7,15 @@ values ('VasiliyAdmin' , '123qwerty');
 
 
 
-insert into service_list(service)
-values ('Мойка');
+insert into service_list(service, cost)
+values ('Мойка', 800);
 
-insert into service_list(service)
-values ('Химчистка');
+insert into service_list(service, cost)
+values ('Химчистка', 1000);
 
-insert into service_list(service)
-values ('Обработка кузова');
+insert into service_list(service, cost)
+values ('Обработка кузова', 900);
 
-insert into service_list(service)
-values ('Полировка');
+insert into service_list(service, cost)
+values ('Полировка', 600);
 
