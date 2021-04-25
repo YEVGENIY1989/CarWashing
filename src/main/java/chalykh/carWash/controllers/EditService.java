@@ -5,8 +5,7 @@ import chalykh.carWash.domain.ServiceCarWash;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping("edit")
@@ -23,9 +22,22 @@ public class EditService {
     public String addService(Model model){
 
 
-        serviceDao.deleteRowOfNewService("Мойка");
-        System.out.println("In GET in EditService controller");
+        model.addAttribute("serviceList", serviceDao.getAll());
+
         return "editService.html";
+    }
+
+    @PostMapping()
+    public String deleteFromServiceList(@RequestParam String nameOfService){
+        serviceDao.deleteRowOfNewService(nameOfService);
+        return "redirect:/edit";
+    }
+
+    @PostMapping("/add")
+    public String addToServiceList(@RequestParam String newNameOfService, @RequestParam int cost){
+        ServiceCarWash serviceCarWash = new ServiceCarWash(newNameOfService, cost);
+        serviceDao.insertNewService(serviceCarWash);
+        return "redirect:/edit";
     }
 
 

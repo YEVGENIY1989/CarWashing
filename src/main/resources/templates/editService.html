@@ -1,10 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
+
+    <header>
+        <h1>Добавить/Удалить</h1>
+    </header>
+
+    <div>
+        <form method="post"
+         th:action = "@{/edit}">
+
+            <select th:name="nameOfService">
+                <option th:each="service : ${serviceList}" th:text = ${service.carWashService} th:value = ${service.carWashService}> Выберите...
+                </option>
+            </select>
+
+            <input type="submit" value="удалить">
+            <br>
+
+
+        </form>
+    </div>
+
+    <br>
+
+    <div>
+        <form method="post"
+              th:action = "@{/edit/add}">
+            <label>Название новой услуги</label>
+            <input type="text" th:name = "newNameOfService">
+            <label>Цена новой услуги</label>
+            <input type="text" th:name = "cost">
+            <input type="submit" value="добавить">
+
+        </form>
+    </div>
 
 </body>
 </html>

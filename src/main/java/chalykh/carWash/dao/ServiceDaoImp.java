@@ -53,7 +53,10 @@ public class ServiceDaoImp implements ServiceDao{
 
     @Override
     public List<ServiceCarWash> getAll() {
-        return null;
+        String sqlCommand = "select service, cost from service_list";
+        List<ServiceCarWash> serviceList = jdbcOperations.query(sqlCommand, new ServiceMapper());
+
+        return serviceList;
     }
 
     private static class ServiceMapper implements RowMapper<ServiceCarWash>{
@@ -61,7 +64,7 @@ public class ServiceDaoImp implements ServiceDao{
         @Override
         public ServiceCarWash mapRow(ResultSet resultSet, int i) throws SQLException {
 
-            int id = resultSet.getInt("id");
+            //int id = resultSet.getInt("id");
             int cost = resultSet.getInt("cost");
             String serviceName = resultSet.getString("service");
             ServiceCarWash service = new ServiceCarWash(serviceName, cost);
