@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47c4efb9-1e64-4186-b6a9-098e6f48b6d6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/chalykh/carWash/helper/DataAndTime.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chalykh/carWash/controllers/EditService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chalykh/carWash/controllers/EditService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chalykh/carWash/dao/ServiceDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chalykh/carWash/dao/ServiceDaoImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chalykh/carWash/controllers/ServiceForUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chalykh/carWash/controllers/ServiceForUsers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chalykh/carWash/dao/ClientDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chalykh/carWash/dao/ClientDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/carWash.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/carWash.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editService.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editService.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/chalykh/carWash/controllers/EditService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chalykh/carWash/controllers/EditService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chalykh/carWash/dao/ServiceDaoImp$ServiceMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chalykh/carWash/dao/ServiceDaoImp$ServiceMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/chalykh/carWash/dao/ServiceDaoImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/chalykh/carWash/dao/ServiceDaoImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/carWash.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/carWash.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,46 +136,46 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1032" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1619206735740" />
-    <state x="1245" y="230" key="#com.intellij.ide.util.MemberChooser" timestamp="1619271517565">
+    <state x="1245" y="230" key="#com.intellij.ide.util.MemberChooser" timestamp="1619373884777">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1245" y="230" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1619271517565" />
+    <state x="1245" y="230" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1619373884777" />
     <state x="962" y="88" key="CommitChangelistDialog2" timestamp="1619292184546">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="962" y="88" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1619292184546" />
-    <state width="914" height="262" key="GridCell.Tab.0.bottom" timestamp="1619363134087">
+    <state width="914" height="262" key="GridCell.Tab.0.bottom" timestamp="1619364030876">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="262" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1619363134087" />
-    <state width="914" height="262" key="GridCell.Tab.0.center" timestamp="1619363134087">
+    <state width="914" height="262" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1619364030876" />
+    <state width="914" height="262" key="GridCell.Tab.0.center" timestamp="1619364030876">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="262" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1619363134087" />
-    <state width="914" height="262" key="GridCell.Tab.0.left" timestamp="1619363134086">
+    <state width="914" height="262" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1619364030876" />
+    <state width="914" height="262" key="GridCell.Tab.0.left" timestamp="1619364030876">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="262" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1619363134086" />
-    <state width="914" height="262" key="GridCell.Tab.0.right" timestamp="1619363134087">
+    <state width="914" height="262" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1619364030876" />
+    <state width="914" height="262" key="GridCell.Tab.0.right" timestamp="1619364030876">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="262" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1619363134087" />
-    <state width="914" height="262" key="GridCell.Tab.1.bottom" timestamp="1619363134087">
+    <state width="914" height="262" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1619364030876" />
+    <state width="914" height="262" key="GridCell.Tab.1.bottom" timestamp="1619364030877">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="262" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1619363134087" />
-    <state width="914" height="262" key="GridCell.Tab.1.center" timestamp="1619363134087">
+    <state width="914" height="262" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1619364030877" />
+    <state width="914" height="262" key="GridCell.Tab.1.center" timestamp="1619364030876">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="262" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1619363134087" />
-    <state width="914" height="262" key="GridCell.Tab.1.left" timestamp="1619363134087">
+    <state width="914" height="262" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1619364030876" />
+    <state width="914" height="262" key="GridCell.Tab.1.left" timestamp="1619364030876">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="262" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1619363134087" />
-    <state width="914" height="262" key="GridCell.Tab.1.right" timestamp="1619363134087">
+    <state width="914" height="262" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1619364030876" />
+    <state width="914" height="262" key="GridCell.Tab.1.right" timestamp="1619364030876">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="262" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1619363134087" />
+    <state width="914" height="262" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1619364030876" />
     <state width="912" height="342" key="GridCell.Tab.2.bottom" timestamp="1619272245127">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
