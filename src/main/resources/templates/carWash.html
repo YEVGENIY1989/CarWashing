@@ -11,6 +11,33 @@
         <h1>Забронируйте удобное для вас время </h1>
     </header>
 
+    <div id = "carWash">
+
+        <form method="post"
+        th:action="@{/carWash}"
+        th:object="${client}">
+
+            <label>Выберите дату</label>
+            <select th:field="*{dateOfService}">
+                <option th:each = "data : ${data}" th:text="${data}" th:value="${data}"></option>
+            </select>
+
+            <label>Выберите услугу</label>
+            <select th:name="selectService">
+                <option th:each = "service : ${serviseList}" th:text="${service.carWashService}" th:value="${service.carWashService}"></option>
+            </select>
+
+            <label>Выберите свободное время</label>
+            <select th:field="*{timeOfService}">
+                <option th:each = "time : ${time}" th:text="${time}" th:value="${time}"></option>
+            </select>
+
+            <input type="submit" value="Забронировать">
+            <br>
+
+        </form>
+
+    </div>
 
 </body>
 </html>

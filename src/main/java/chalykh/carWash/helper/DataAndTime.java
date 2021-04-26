@@ -20,7 +20,7 @@ public class DataAndTime {
 
         timeOfDay = new ArrayList<>(24);
 
-        for(int i = 0; i < timeOfDay.size(); i++){
+        for(int i = 0; i <= 24; i++){
 
             if(i < 10)
                 timeOfDay.add(String.format("00:%02d", i));
@@ -28,7 +28,7 @@ public class DataAndTime {
                 timeOfDay.add(String.format("%02d:00", i));
 
         }
-
+        updatesDateOfWeek();
 
     }
 

@@ -4,14 +4,21 @@ public class Client {
 
     private int id;
     private String timeOfService;
-    private String typeOfService;
+    private ServiceCarWash typeOfService;
     private String dateOfService;
 
 
-    public Client(String timeOfService, String typeOfService, String dateOfService) {
+    public Client(String timeOfService, String dateOfService) {
         this.timeOfService = timeOfService;
-        this.typeOfService = typeOfService;
         this.dateOfService = dateOfService;
+    }
+
+    public ServiceCarWash getTypeOfService() {
+        return typeOfService;
+    }
+
+    public void setTypeOfService(ServiceCarWash typeOfService) {
+        this.typeOfService = typeOfService;
     }
 
     public int getId() {
@@ -30,13 +37,7 @@ public class Client {
         this.timeOfService = timeOfService;
     }
 
-    public String getTypeOfService() {
-        return typeOfService;
-    }
 
-    public void setTypeOfService(String typeOfService) {
-        this.typeOfService = typeOfService;
-    }
 
     public String getDateOfService() {
         return dateOfService;
@@ -44,5 +45,13 @@ public class Client {
 
     public void setDateOfService(String dateOfService) {
         this.dateOfService = dateOfService;
+    }
+
+    @Override
+    public String toString() {
+        return "Client{" +
+                "timeOfService='" + timeOfService + '\'' +
+                ", dateOfService='" + dateOfService + '\'' +
+                '}';
     }
 }
