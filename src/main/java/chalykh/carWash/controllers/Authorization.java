@@ -2,8 +2,10 @@ package chalykh.carWash.controllers;
 
 
 import chalykh.carWash.dao.AdminDao;
+import chalykh.carWash.dao.UserDao;
 import chalykh.carWash.domain.Admin;
 
+import chalykh.carWash.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
@@ -20,10 +22,12 @@ public class Authorization {
     private AdminDao adminDao;
     private Model model;
     private boolean isFailedAthor;
+    private UserDao userDao;
 
     @Autowired
-    public Authorization(AdminDao adminDao){
+    public Authorization(AdminDao adminDao, UserDao userDao){
         this.adminDao = adminDao;
+        this.userDao = userDao;
     }
 
    @GetMapping
@@ -31,7 +35,12 @@ public class Authorization {
 
         if (isFailedAthor)
             model.addAttribute("error", "Ошибка авторизации. Неправильный логин или пароль");
-        return "authorization.html";
+
+       User user = userDao.findById(1);
+
+       model.addAttribute("user", user);
+
+       return "authorization.html";
     }
 
     @PostMapping()

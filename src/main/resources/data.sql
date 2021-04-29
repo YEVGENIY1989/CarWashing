@@ -17,6 +17,14 @@ values ('Обработка кузова', 900);
 insert into service_list(service, cost)
 values ('Полировка', 600);
 
+insert into users (first_name, last_name)
+values ('Yevgeniy', 'Chalykh');
+
+insert into users (first_name, last_name)
+values ('Masha', 'Pavlova');
+
+insert into users (first_name, last_name)
+values ('Pavel', 'Langovoi');
 
 insert into client(timeOfService, dataOfService, service_id)
 values ('00:08', '27.04.2021',1);

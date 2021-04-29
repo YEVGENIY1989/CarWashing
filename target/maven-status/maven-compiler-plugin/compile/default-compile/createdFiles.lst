@@ -1,2 +1,3 @@
 chalykh\carWash\dao\AdminDao.class
 chalykh\carWash\Main.class
+chalykh\carWash\config\SpringSecurityConfig.class
