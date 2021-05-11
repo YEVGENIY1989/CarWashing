@@ -30,7 +30,14 @@ public class Authorization {
         this.userDao = userDao;
     }
 
-   @GetMapping
+    @GetMapping
+    public String helloPage(){
+
+
+        return "hello.html";
+    }
+
+   @GetMapping("/authorization")
     public String authorizationAdmin(@ModelAttribute("admin")Admin admin, Model model){
 
         if (isFailedAthor)

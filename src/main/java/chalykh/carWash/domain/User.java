@@ -1,18 +1,17 @@
 package chalykh.carWash.domain;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
-@Entity
-@Table(name = "users")
+@Entity // указывает что класс является сущностью(из БД) Сущность это тип объекта который должен хранится в БД
+// Каждая таблица в базе данных должна представлять одну сущность
+@Table(name = "users") // указывает название таблицы бд
 public class User {
 
-    @Id
+    @Id // указывает что ID таблицы
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // указывает как генерить значение.В данном случае автоматический
     private Integer id;
 
-    @Column(name = "first_name", length = 50, nullable = false)
+    @Column(name = "first_name", length = 50, nullable = false) // указывает поля бд
     private String firstName;
 
     @Column(name = "last_name", length = 50, nullable = false)
